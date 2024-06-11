@@ -1,0 +1,120 @@
+results/mettack/GIN/citeseer/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 71.5±0.5
+
+results/mettack/GIN/citeseer/0.log - NoisyGCN Attacked Acc:
+实验结果: 72.0±0.3
+
+results/mettack/GIN/citeseer/5.log - NoisyGCN Non Attacked Acc:
+实验结果: 72.7±0.4
+
+results/mettack/GIN/citeseer/5.log - NoisyGCN Attacked Acc:
+实验结果: 71.1±0.8
+
+results/mettack/GIN/citeseer/10.log - NoisyGCN Non Attacked Acc:
+实验结果: 71.9±0.2
+
+results/mettack/GIN/citeseer/10.log - NoisyGCN Attacked Acc:
+实验结果: 69.8±0.6
+
+results/mettack/GIN/pubmed/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 85.5±0.4
+
+results/mettack/GIN/pubmed/0.log - NoisyGCN Attacked Acc:
+实验结果: 85.6±0.4
+
+results/mettack/GIN/polblogs/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 95.3±0.5
+
+results/mettack/GIN/polblogs/0.log - NoisyGCN Attacked Acc:
+实验结果: 94.9±0.5
+
+results/mettack/GIN/polblogs/5.log - NoisyGCN Non Attacked Acc:
+实验结果: 95.2±0.5
+
+results/mettack/GIN/polblogs/5.log - NoisyGCN Attacked Acc:
+实验结果: 79.6±0.4
+
+results/mettack/GIN/polblogs/10.log - NoisyGCN Non Attacked Acc:
+实验结果: 95.0±0.1
+
+results/mettack/GIN/polblogs/10.log - NoisyGCN Attacked Acc:
+实验结果: 71.3±0.5
+
+results/mettack/GIN/cora/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 82.8±0.3
+
+results/mettack/GIN/cora/0.log - NoisyGCN Attacked Acc:
+实验结果: 82.7±1.2
+
+results/mettack/GIN/cora/5.log - NoisyGCN Non Attacked Acc:
+实验结果: 83.3±0.5
+
+results/mettack/GIN/cora/5.log - NoisyGCN Attacked Acc:
+实验结果: 79.9±0.3
+
+results/mettack/GIN/cora/10.log - NoisyGCN Non Attacked Acc:
+实验结果: 83.9±1.0
+
+results/mettack/GIN/cora/10.log - NoisyGCN Attacked Acc:
+实验结果: 75.1±1.8
+
+results/mettack/GCN/citeseer/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 71.5±0.5
+
+results/mettack/GCN/citeseer/0.log - NoisyGCN Attacked Acc:
+实验结果: 72.0±0.3
+
+results/mettack/GCN/citeseer/5.log - NoisyGCN Non Attacked Acc:
+实验结果: 72.7±0.4
+
+results/mettack/GCN/citeseer/5.log - NoisyGCN Attacked Acc:
+实验结果: 72.1±0.0
+
+results/mettack/GCN/citeseer/10.log - NoisyGCN Non Attacked Acc:
+实验结果: 71.9±0.2
+
+results/mettack/GCN/citeseer/10.log - NoisyGCN Attacked Acc:
+实验结果: 70.6±0.0
+
+results/mettack/GCN/pubmed/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 85.5±0.4
+
+results/mettack/GCN/pubmed/0.log - NoisyGCN Attacked Acc:
+实验结果: 85.6±0.4
+
+results/mettack/GCN/polblogs/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 95.3±0.5
+
+results/mettack/GCN/polblogs/0.log - NoisyGCN Attacked Acc:
+实验结果: 94.9±0.5
+
+results/mettack/GCN/polblogs/5.log - NoisyGCN Non Attacked Acc:
+实验结果: 95.2±0.5
+
+results/mettack/GCN/polblogs/5.log - NoisyGCN Attacked Acc:
+实验结果: 79.6±0.4
+
+results/mettack/GCN/polblogs/10.log - NoisyGCN Non Attacked Acc:
+实验结果: 95.0±0.1
+
+results/mettack/GCN/polblogs/10.log - NoisyGCN Attacked Acc:
+实验结果: 71.3±0.5
+
+results/mettack/GCN/cora/0.log - NoisyGCN Non Attacked Acc:
+实验结果: 82.8±0.3
+
+results/mettack/GCN/cora/0.log - NoisyGCN Attacked Acc:
+实验结果: 82.7±1.2
+
+results/mettack/GCN/cora/5.log - NoisyGCN Non Attacked Acc:
+实验结果: 83.3±0.5
+
+results/mettack/GCN/cora/5.log - NoisyGCN Attacked Acc:
+实验结果: 79.9±0.3
+
+results/mettack/GCN/cora/10.log - NoisyGCN Non Attacked Acc:
+实验结果: 83.9±1.0
+
+results/mettack/GCN/cora/10.log - NoisyGCN Attacked Acc:
+实验结果: 74.7±2.3
+

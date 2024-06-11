@@ -153,7 +153,24 @@ def test_noisy(new_adj):
 
     return acc_test.item()
 
+def write_to_file(file_path, content):
+    """
+    将内容写入指定的文件。如果文件夹不存在，则创建文件夹。
 
+    参数:
+    file_path (str): 文件的路径
+    content (str): 要写入文件的内容
+    """
+    # 获取文件的目录
+    directory = os.path.dirname(file_path)
+    
+    # 如果目录不存在，则创建目录
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    
+    # 将内容写入文件
+    with open(file_path, 'a') as file:
+        file.write(content)
 
 if __name__ == '__main__':
     """
@@ -212,3 +229,8 @@ if __name__ == '__main__':
     print("NoisyGCN Non Attacked Acc - {}" .format(acc_noise_clean))
     print("NoisyGCN Attacked Acc - {}" .format(acc_noise_attacked))
     print('---------------')
+
+    write_to_file(
+        f'results/dice/{args.modelname}/{args.dataset}/{str(int(args.ptb_rate*100))}.log', 
+        f'args:\nseed: {args.seed}\nhidden: {args.hidden}\ndropout: {args.dropout}\ndataset: {args.dataset}\nptb_rate: {args.ptb_rate}\nmodel: {args.model}\nmodelname: {args.modelname}\ndefensemodel: {args.defensemodel}\nGNNGuard: {args.GNNGuard}\nNoisyGCN Non Attacked Acc: {acc_noise_clean}\nNoisyGCN Attacked Acc: {acc_noise_attacked}\n\n'
+    )

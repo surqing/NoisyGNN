@@ -11,6 +11,7 @@ To use the benchmarks (GCNGuard, RGCN ...), please adapt the argument "defense"
 in the "test" function. We provided an example of their use in the main section
 of this file.
 """
+import os
 
 import torch
 import numpy as np
@@ -83,6 +84,9 @@ np.random.seed(args.seed)
 torch.manual_seed(args.seed)
 if device != 'cpu':
     torch.cuda.manual_seed(args.seed)
+else:
+    print('不可使用 CPU 进行训练')
+    exit(1)
 
 # Load the Dataset
 data = Dataset(root='/tmp/', name=args.dataset)
@@ -214,7 +218,24 @@ def test(adj, defense="GCN"):
     acc_test, _ = classifier.test(idx_test)
     return acc_test.item()
 
+def write_to_file(file_path, content):
+    """
+    将内容写入指定的文件。如果文件夹不存在，则创建文件夹。
 
+    参数:
+    file_path (str): 文件的路径
+    content (str): 要写入文件的内容
+    """
+    # 获取文件的目录
+    directory = os.path.dirname(file_path)
+    
+    # 如果目录不存在，则创建目录
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    
+    # 将内容写入文件
+    with open(file_path, 'a') as file:
+        file.write(content)
 
 if __name__ == '__main__':
     """
@@ -247,7 +268,7 @@ if __name__ == '__main__':
 
 
     # --- RGCN --- #
-    # # print('=== testing RGCN ===')
+    # print('=== testing RGCN ===')
     # attention = False
     # acc_rgcn_non_attacked = test(adj, defense = "RGCN")
     # acc_rgcn_attacked = test(modified_adj_sparse, defense = "RGCN")
@@ -260,6 +281,13 @@ if __name__ == '__main__':
 
 
     print('---------------')
-    print("NoisyGCN Non Attacked Acc - {}" .format(acc_noise_clean))
-    print("NoisyGCN Attacked Acc - {}" .format(acc_noise_attacked))
+    print('args:')
+    print(f'seed: {args.seed}\nhidden: {args.hidden}\ndropout: {args.dropout}\ndataset: {args.dataset}\nptb_rate: {args.ptb_rate}\nmodel: {args.model}\nmodelname: {args.modelname}\ndefensemodel: {args.defensemodel}\nGNNGuard: {args.GNNGuard}')
+    print(f"NoisyGCN Non Attacked Acc - {acc_noise_clean}")
+    print(f"NoisyGCN Attacked Acc - {acc_noise_attacked}")
     print('---------------')
+
+    write_to_file(
+        f'results/mettack/{args.modelname}/{args.dataset}/{str(int(args.ptb_rate*100))}.log', 
+        f'args:\nseed: {args.seed}\nhidden: {args.hidden}\ndropout: {args.dropout}\ndataset: {args.dataset}\nptb_rate: {args.ptb_rate}\nmodel: {args.model}\nmodelname: {args.modelname}\ndefensemodel: {args.defensemodel}\nGNNGuard: {args.GNNGuard}\nNoisyGCN Non Attacked Acc: {acc_noise_clean}\nNoisyGCN Attacked Acc: {acc_noise_attacked}\n\n'
+    )
